@@ -6,17 +6,20 @@ import { CreateTodo } from './components/CreateTodo'
 import { Todos } from './components/Todos'
 
 function App() {
-
+  const [todos, setTodos] = useState([]);
+  
+  fetch("http://192.168.2.6:3000/todos").then(
+    async function(res) {
+     const json = await res.json();
+     console.log(json)
+     setTodos(json.allTodo ) 
+    }
+  )
+  // console.log(todos)
   return (
     <div>
       <CreateTodo></CreateTodo>
-      <Todos todos={[
-        {
-          title:"study dsa",
-          descripition:"study dsa for 5 hours",
-          completed:false
-        }
-      ]}></Todos>
+      <Todos todos={todos}></Todos>
     </div>
   )
 }

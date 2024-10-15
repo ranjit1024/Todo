@@ -1,4 +1,10 @@
-export function CreateTodo(){
+import { useState } from "react"
+
+export function CreateTodo([props]){
+    //local state variable
+    const [title, setTitle] = useState("");
+    const [descripition, setDescripiton] = useState("");
+    
     return <div style={{
         textAlign:"center"
 
@@ -25,10 +31,17 @@ export function CreateTodo(){
             margin:10,
             border:"1px solid black",
             borderRadius:"4px",
-            backgroundColor:"green",
+            backgroundColor:"royalblue",
             color:"white",
             cursor:"pointer",
             fontWeight:500
+        }} onClick={()=>{
+            fetch("http://192.168.2.6:3000/todo"),{
+                method:"POST",
+                body:{
+                    title:
+                }
+            }
         }}>Add a Todo</button>
         
     </div>

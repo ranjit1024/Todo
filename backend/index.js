@@ -1,12 +1,14 @@
 const express = require("express");
-
+const cors = require("cors")
 const { createTodo,updateTodo} = require("./types");
 const { todo } = require("./db");
 
 
 const app = express();
+app.use(cors())
 const port = 3000;
 
+let counter = 0;
 app.use(express.json());
 
 
@@ -30,10 +32,12 @@ app.post("/todo",async(req, res)=>{
 })
 
 app.get("/todos", async (req, res)=>{
-    const todo = await todo.find();
-    console.log(todo);
+    const allTodo = await todo.find();
+    // console.log(allTodo);
+    counter++;
+    console.log(counter)
     res.json({
-        msg: todo,
+        allTodo,
     })
 
 })
