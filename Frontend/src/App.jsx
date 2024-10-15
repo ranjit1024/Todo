@@ -15,7 +15,7 @@ function App() {
      setTodos(json.allTodo ) 
     }
   )
-  // console.log(todos)
+
   return (
     <div>
       <CreateTodo></CreateTodo>
