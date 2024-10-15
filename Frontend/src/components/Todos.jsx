@@ -8,7 +8,7 @@ export function Todos({todos}){
         // marginBottom:10
     }}>
         {todos.map(function(todo) {
-            return <div style={{textAlign:"center", width:"400px",backgroundColor:"lightblue", padding:"10px", marginBottom:"10px", borderRadius:"4px"}}>
+            return <div style={{textAlign:"center", width:"400px",backgroundColor:"#F0F8FF", padding:"10px", marginBottom:"10px", borderRadius:"4px"}}>
                 <h1>{todo.title}</h1>
                 <h2>{todo.descripition}</h2>
                 <button style={{padding:"10px 20px", borderRadius:"5px" , border:"1px solid black", backgroundColor:"green", color:"white"}}>{todo.completed==true ? "completed" : "not Completed"}</button>

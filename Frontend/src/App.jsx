@@ -11,7 +11,7 @@ function App() {
   fetch("http://192.168.2.6:3000/todos").then(
     async function(res) {
      const json = await res.json();
-     console.log(json)
+     
      setTodos(json.allTodo ) 
     }
   )
