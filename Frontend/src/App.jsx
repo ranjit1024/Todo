@@ -20,7 +20,7 @@ function App() {
     <div>
       <CreateTodo></CreateTodo>
       <Todos todos={todos}></Todos>
-      {console.log(todos)}
+      
     </div>
   )
 }
