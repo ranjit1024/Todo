@@ -1,7 +1,10 @@
 export function CreateTodo(){
-    return <div>
+    return <div style={{
+        textAlign:"center"
+
+    }}>
         <input type="text" placeholder="Title" style={{
-            padding:10,
+            padding:"10px 100px 10px 10px",
             margin:10,
             border:"1px solid black",
             borderRadius:"4px",
@@ -9,7 +12,8 @@ export function CreateTodo(){
         }}/><br />
 
         <input type="text" placeholder="Descripition" style={{
-            padding:10,
+            padding:"10px 100px 10px 10px",
+           
             margin:10,
             border:"1px solid black",
             borderRadius:"4px",
@@ -23,7 +27,8 @@ export function CreateTodo(){
             borderRadius:"4px",
             backgroundColor:"green",
             color:"white",
-            cursor:"pointer"
+            cursor:"pointer",
+            fontWeight:500
         }}>Add a Todo</button>
         
     </div>
