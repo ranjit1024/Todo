@@ -31,7 +31,7 @@ export function CreateTodo({props}){
             const disCriptionValue = e.target.value;
             setDescripiton(disCriptionValue)
         }}/><br />
-        {console.log(title)}
+        
 
         <button style={{
             padding:10,
